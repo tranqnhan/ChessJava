@@ -1,4 +1,4 @@
-package com.mygdx.javachess;
+package com.mygdx.chessjava;
 
 import java.util.ArrayList;
 import java.util.List;

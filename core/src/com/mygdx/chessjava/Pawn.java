@@ -1,4 +1,4 @@
-package com.mygdx.javachess;
+package com.mygdx.chessjava;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import java.util.ArrayList;

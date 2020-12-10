@@ -1,4 +1,4 @@
-package com.mygdx.javachess;
+package com.mygdx.chessjava;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;

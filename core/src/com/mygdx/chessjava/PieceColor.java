@@ -1,4 +1,4 @@
-package com.mygdx.javachess;
+package com.mygdx.chessjava;
 
 public enum PieceColor {
     Black(0),

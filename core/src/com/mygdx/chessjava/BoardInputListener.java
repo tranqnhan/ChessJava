@@ -1,4 +1,4 @@
-package com.mygdx.javachess;
+package com.mygdx.chessjava;
 
 public final class BoardInputListener implements MouseEventListener {
     private final Board board;
