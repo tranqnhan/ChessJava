@@ -21,8 +21,8 @@ public final class BoardInputListener implements MouseEventListener {
         if (x >= board.ORIGIN_X && x <= board.WIDTH_AS_PIXELS &&
             y >= board.ORIGIN_Y && y <= board.HEIGHT_AS_PIXELS) {
           
-            int boardX = ((x - board.ORIGIN_X) * board.WIDTH) / board.WIDTH_AS_PIXELS;
-            int boardY = ((y - board.ORIGIN_Y) * board.HEIGHT) / board.WIDTH_AS_PIXELS;
+            int boardX = ((x - board.ORIGIN_X) * board.getWidth()) / board.WIDTH_AS_PIXELS;
+            int boardY = ((y - board.ORIGIN_Y) * board.getHeight()) / board.WIDTH_AS_PIXELS;
             
             board.boardInteraction(boardX, boardY);
         }

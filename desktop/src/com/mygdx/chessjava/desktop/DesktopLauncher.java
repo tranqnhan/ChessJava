@@ -1,8 +1,8 @@
-package com.mygdx.javachess.desktop;
+package com.mygdx.chessjava.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.mygdx.javachess.Chess;
+import com.mygdx.chessjava.Chess;
 
 public class DesktopLauncher {
     public static void main (String[] arg) {

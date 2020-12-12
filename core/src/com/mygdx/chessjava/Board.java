@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Board {
     private final Piece[][] board;
-    public final int WIDTH = 8;
-    public final int HEIGHT = 8;
+    private int width;
+    private int height;
     private final Texture boardTex;
     private final BoardInputListener boardInput;
     private final List<GuideDot> guideDots;
@@ -18,18 +18,14 @@ public class Board {
     public final int WIDTH_AS_PIXELS = 512;
     public final int HEIGHT_AS_PIXELS = 512;
     
-    public Board() {
-        this.board = new Piece[HEIGHT][WIDTH];
+    public Board(int width, int height) {
+        this.width = width;
+        this.height = height;
+
+        this.board = new Piece[height][width];
         this.boardTex = new Texture("chess_board.png");
         this.guideDots = new ArrayList<>();
         this.boardInput = new BoardInputListener(this);
-        
-        this.movePiecePosition(PieceFactory.makeQueenPiece(PieceColor.Black), 0, 5);
-        this.movePiecePosition(PieceFactory.makeRookPiece(PieceColor.White), 1, 4);
-        this.movePiecePosition(PieceFactory.makePawnPiece(PieceColor.Black), 2, 5);
-        this.movePiecePosition(PieceFactory.makeBishopPiece(PieceColor.White), 3, 4);
-        this.movePiecePosition(PieceFactory.makeKingPiece(PieceColor.Black), 4, 5);
-        this.movePiecePosition(PieceFactory.makeKnightPiece(PieceColor.White), 3, 5);
     }
     
     public void boardInteraction(int boardX, int boardY) {
@@ -48,22 +44,6 @@ public class Board {
                 this.selectPiece(this.board[boardY][boardX]);
             }
         }
-    }
-    
-    public void printBoard() {
-        System.out.println(" -------------------- Printing Board -------------------- ");
-        for (Piece[] row : this.board) {
-            System.out.print("{");
-            for (Piece p : row) {
-                if (p != null) {
-                    System.out.print("P,");
-                } else {
-                    System.out.print("N,");
-                }
-            }
-            System.out.print("} \n");
-        }
-        System.out.println(" -------------------- Operation End --------------------- ");
     }
     
     private void selectPiece(Piece piece) {
@@ -87,7 +67,7 @@ public class Board {
     }
     
     //Return true if successful, false otherwise
-    private boolean movePiecePosition(Piece piece, int boardX, int boardY) {
+    public boolean movePiecePosition(Piece piece, int boardX, int boardY) {
         PiecePosition currentPosition = piece.position;
         
         if (currentPosition == null) {
@@ -98,17 +78,26 @@ public class Board {
             if (piece.movePieceOperation(board, boardX, boardY)) {
                 this.board[currentPosition.y][currentPosition.x] = null;
                 this.board[piece.position.y][piece.position.x] = piece;
+                printBoard();
                 return true;
             }
             return false;
         }
     }
+
+    public int getWidth() {
+        return this.width;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
     
     public void render(Batch batch) {
         batch.draw(this.boardTex, ORIGIN_X, ORIGIN_Y, WIDTH_AS_PIXELS, HEIGHT_AS_PIXELS);
         
-        for (int row = 0; row < HEIGHT; row++) {
-            for (int col = 0; col < WIDTH; col++) {
+        for (int row = 0; row < this.height; row++) {
+            for (int col = 0; col < this.width; col++) {
                 if (this.board[row][col] != null) {
                    this.board[row][col].render(batch);
                 }
@@ -124,4 +113,24 @@ public class Board {
         this.boardTex.dispose();
         PieceFactory.disposeTexture();
     }
+    
+    public void printBoard() {
+        System.out.println(" -------------------- Printing Board -------------------- ");
+        for (Piece[] row : this.board) {
+            System.out.print("{");
+            for (Piece p : row) {
+                if (p != null) {
+                    if (p.color == PieceColor.White)
+                        System.out.print("WP,");
+                    else
+                        System.out.print("BP,");
+                } else {
+                    System.out.print("NN,");
+                }
+            }
+            System.out.print("} \n");
+        }
+        System.out.println(" -------------------- Operation End --------------------- ");
+    }
+    
 }

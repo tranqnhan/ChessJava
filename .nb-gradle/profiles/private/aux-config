@@ -4,30 +4,12 @@
   <auxiliary>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-      <group>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/assets/chess_pieces.png</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/assets/chess_board.png</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/desktop/src/com/mygdx/javachess/desktop/DesktopLauncher.java</file>
-      </group>
+      <group/>
     </open-files>
+    <editor-bookmarks lastBookmarkId="0" xmlns="http://www.netbeans.org/ns/editor-bookmarks/2"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
       <group>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/Board.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/MouseEventHandler.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/PiecePosition.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/Chess.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/Knight.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/MouseEventListener.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/PieceFactory.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/Bishop.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/InputManager.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/PieceColor.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/Queen.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/Rook.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/Piece.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/GuideDot.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/Pawn.java</file>
-        <file>file:/C:/Users/nhanf/Documents/JavaChess/core/src/com/mygdx/javachess/BoardInputListener.java</file>
+        <file>file:/C:/Users/nhanf/Documents/My%20Programs/ChessJava/desktop/build.gradle</file>
       </group>
     </open-files>
   </auxiliary>
